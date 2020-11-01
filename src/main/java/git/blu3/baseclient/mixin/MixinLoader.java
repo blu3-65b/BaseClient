@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package git.blu3.baseclient.mixin;
 
 import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 import java.util.Map;
 
 @IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
-public class ExampleModLoadingPlugin implements IFMLLoadingPlugin
+public class MixinLoader implements IFMLLoadingPlugin
 {
-    public ExampleModLoadingPlugin()
+    public MixinLoader()
     {
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.examplemod.json");
+        Mixins.addConfiguration("mixins.baseclient.json");
     }
 
     /**
